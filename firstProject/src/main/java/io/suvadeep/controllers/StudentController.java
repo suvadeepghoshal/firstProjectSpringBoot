@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping(path = "api/student", method = RequestMethod.GET)
 public class StudentController {
 
-    StudentService studentService = new StudentServiceImpl();
+    private final StudentService studentService = new StudentServiceImpl();
 
     @GetMapping
     public List<Student> getStudents() {
